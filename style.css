@@ -430,7 +430,7 @@ footer{
     #menu {
         display: block;
         color: white;
-        font-size: 2em;
+        font-size: 2.5em;
         cursor: pointer;
     }
     .links {
@@ -447,7 +447,18 @@ footer{
     ul.links {
         display: none; 
         flex-direction: column;
+        background: var(--second-background);
+        position: absolute;
+        top: 4.5em;
+        right: 0;
+        width: 100%;
+        padding: 1em 0;
+        text-align: center;
     } 
+     nav ul a {
+        font-size: 1.2em;
+        margin: 1em 0;
+     }
     ul.links.active {
         display: flex; 
     }
@@ -463,7 +474,7 @@ footer{
 
     
     #home h1{
-        font-size: 2.5em;
+        font-size: 3em;
     }
     #home h3{
         font-size: 1.5em;
@@ -490,6 +501,23 @@ footer{
         flex-direction: column;
         gap: 5em;
         align-items: baseline;
+    }
+}
+@media (max-width: 1024px) {
+    section {
+        padding: 8em 5%;
+    }
+    .logo {
+        font-size: 1.8em;
+    }
+    #home h1 {
+        font-size: 4em;
+    }
+    #home h3 {
+        font-size: 1.8em;
+    }
+    #home img {
+        width: 30vw;
     }
 }
 
@@ -535,6 +563,16 @@ footer{
     #home img {
         width: 32vw;
     }
+    #about {
+        flex-direction: column;
+    }
+    #about img {
+        width: 70%;
+    }
+    .skills {
+        flex-direction: column;
+        gap: 2em;
+    }
 
     
     #about .skills {
@@ -558,8 +596,28 @@ footer{
     
     footer {
         flex-direction: column;
-        gap: 5em;
+        gap: 2em;
         align-items: baseline;
     }
 }
-
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2em;
+    }
+    #home h3 {
+        font-size: 1.2em;
+    }
+    #home img {
+        width: 50vw;
+    }
+    .btn {
+        font-size: 1em;
+        padding: 0.4em 0.8em;
+    }
+    #about img {
+        width: 80%;
+    }
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
